@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", cursive;
+    font-weight: 500;
+    background: #000;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.scoreboard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 500px;
+    background: #333;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.scoreboard.shown {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.scoreboard .score {
+    font-size: 5vw;
+    font-weight: 900;
+}
+
+.scoreboard button {
+    display: block;
+    width: 70%;
+    outline: none;
+    border: none;
+    border-radius: 199px;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 25px;
+    color: white;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    background: #656769;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.2, 0.61, 0.36, 1);
+}
+
+.scoreboard button:hover {
+    background-color: #ec063b;
+    letter-spacing: 20px;
+}
+
+@media (max-width: 683px) {
+    .scoreboard .score {
+        font-size: 50px;
+    }
+}
